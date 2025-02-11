@@ -1,0 +1,70 @@
+{
+  "sceneTitle": "NPG Demo",
+  "description": "Demo 3D web experience for NPG.",
+  "loadGlb": [
+    {
+      "url": "/models/npgCube.glb",
+      "relativeUrl": true
+    }
+  ],
+  "loadSpline": [
+    {
+      "url": "/models/spline.json",
+      "relativeUrl": true
+    }
+  ],
+  "canvasSettings": {
+    "backgroundColor": "#ffffff",
+    "antialias": true,
+    "postEffects": {
+      "usePostEffects": false
+    },
+    "lights": [
+      {
+        "isShowcaseLighting": true,
+        "lights": [
+          {
+            "type": "ambient",
+            "color": "#ffffff",
+            "intensity": 0.4,
+            "on": true
+          }
+        ]
+      }
+    ]
+  },
+  "parentPoi": {
+    "name": "Test scene parent POI",
+    "meshid": "Cube",
+    "description": "The parent POI for the test scene, encompassing all child POIs.",
+    "type": "staticObject",
+    "isMaster": true,
+    "cameraControls": {
+      "type": "orbit",
+      "enablePan": false,
+      "startPosition": {
+        "x": 0,
+        "y": 2,
+        "z": 6
+      },
+      "targetOffset": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "constraints": {
+        "up": 90,
+        "down": 90,
+        "minZoom": 2,
+        "maxZoom": 8
+      }
+    }
+  },
+  "debugSettings": {
+    "allTrue": false,
+    "gridHelper": false,
+    "axesHelper": false,
+    "stats": false,
+    "lightHelpers": false
+  }
+}
