@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-D_PPwcl5.js","assets/HamburgerMenu-hNWfbF5H.js","assets/App-BiBqgg88.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-Dy91X-9J.js","assets/HamburgerMenu-CNwHeIuP.js","assets/App-DkzibSwp.js"])))=>i.map(i=>d[i]);
 function _mergeNamespaces(n, m) {
   for (var i = 0; i < m.length; i++) {
     const e = m[i];
@@ -9249,8 +9249,8 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   });
 };
 const pages = {
-  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-D_PPwcl5.js"), true ? __vite__mapDeps([0,1]) : void 0)),
-  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-BiBqgg88.js"), true ? __vite__mapDeps([2,1]) : void 0))
+  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-Dy91X-9J.js"), true ? __vite__mapDeps([0,1]) : void 0)),
+  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-DkzibSwp.js"), true ? __vite__mapDeps([2,1]) : void 0))
 };
 let scenePath = null;
 const Routing = () => {
@@ -9261,9 +9261,6 @@ const Routing = () => {
     scenePath = `${base}/projects/${path || "npgDemo"}`;
   }, [path]);
   const PageComponent = pages[path] || pages["npgDemo"];
-  if (!path) {
-    window.history.replaceState(null, "", "/cube-test/npgDemo");
-  }
   return /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Loading..." }), children: /* @__PURE__ */ jsxRuntimeExports.jsx(PageComponent, {}) });
 };
 function formatMuiErrorMessage(code, ...args) {
@@ -14724,4 +14721,4 @@ export {
   isPlainObject as y,
   defaultTheme as z
 };
-//# sourceMappingURL=index-Ba0oVxyl.js.map
+//# sourceMappingURL=index-ioT4_hi-.js.map
