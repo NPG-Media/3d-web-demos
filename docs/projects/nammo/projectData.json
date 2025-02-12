@@ -1,0 +1,166 @@
+{
+  "sceneTitle": "Nammo demo",
+  "sceneDescription": "A demo Three.js scene for showcasing a digital ammunition catalogue.",
+  "containerSettings": {
+    "image": "/images/NAMMO-04.png",
+    "type": "cover",
+    "bgStyles": {
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "100% 100%"
+    },
+    "fsStyles": {
+      "position": "fixed",
+      "top": "0",
+      "left": "0",
+      "width": "100%",
+      "height": "100%",
+      "backgroundColor": "rgba(128, 128, 128, 0.5)",
+      "backdropFilter": "blur(10px)"
+    },
+    "styles": {
+      "position": "absolute",
+      "top": "10.5%",
+      "left": "17.4%",
+      "width": "36.8%",
+      "height": "83.8%"
+    },
+    "useFullscreenButton": true
+  },
+  "canvasSettings": {
+    "alpha": true,
+    "cameraSettings": {
+      "fov": 40,
+      "near": 0.01,
+      "far": 10,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.12
+      }
+    },
+    "postEffects": {
+      "usePostEffects": true
+    },
+    "environmentProps": {
+      "preset": "studio",
+      "background": false
+    },
+    "lights": [
+      {
+        "isShowcaseLighting": true,
+        "preset": "showcaseWarm"
+      }
+    ]
+  },
+  "parentPoi": {
+    "name": "Ammunition showcaser",
+    "description": "Placeholder ammunition POI.",
+    "type": "productViewer",
+    "cameraControls": {
+      "type": "fixed",
+      "startPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0.12
+      }
+    },
+    "childPois": [
+      {
+        "name": "Ammunition 1",
+        "type": "product",
+        "modelData": {
+          "path": "/models/bulletCrossSection.glb",
+          "format": "glb",
+          "materialSettings": {
+            "materialType": "physical",
+            "colorMap": "/textures/556_baseColor.png",
+            "normalMap": "/textures/556_normal.png",
+            "metalnessMap": "/textures/556_orm.png",
+            "roughnessMap": "/textures/556_orm.png",
+            "aoMap": "/textures/556_orm.png"
+          },
+          "xView": {
+            "enabled": true,
+            "standardMesh": [
+              {
+                "nodeId": "Casing",
+                "materialId": "Bullet"
+              }
+            ],
+            "xViewMesh": [
+              {
+                "nodeId": "CasingHalf1",
+                "materialId": "Bullet"
+              },
+              {
+                "nodeId": "Bullet",
+                "materialId": "Bullet"
+              },
+              {
+                "nodeId": "Gunpowder",
+                "materialId": "Gunpowder"
+              }
+            ],
+            "fadeMesh": [
+              {
+                "nodeId": "CasingHalf2",
+                "materialId": "Bullet"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ammunition 2",
+        "type": "product",
+        "modelData": {
+          "path": "/models/bulletCrossSection.glb",
+          "format": "glb",
+          "materialSettings": {
+            "materialType": "physical",
+            "colorMap": "/textures/556_baseColor.png",
+            "normalMap": "/textures/556_normal.png",
+            "metalnessMap": "/textures/556_orm.png",
+            "roughnessMap": "/textures/556_orm.png",
+            "aoMap": "/textures/556_orm.png"
+          },
+          "xView": {
+            "enabled": true,
+            "standardMesh": [
+              {
+                "nodeId": "Casing",
+                "materialId": "Bullet"
+              }
+            ],
+            "xViewMesh": [
+              {
+                "nodeId": "CasingHalf1",
+                "materialId": "Bullet"
+              },
+              {
+                "nodeId": "Bullet",
+                "materialId": "Bullet"
+              },
+              {
+                "nodeId": "Gunpowder",
+                "materialId": "Gunpowder"
+              }
+            ],
+            "fadeMesh": [
+              {
+                "nodeId": "CasingHalf2",
+                "materialId": "Bullet"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "debugSettings": {
+    "gridHelper": false,
+    "axesHelper": false,
+    "stats": false,
+    "lightHelpers": false
+  }
+}
