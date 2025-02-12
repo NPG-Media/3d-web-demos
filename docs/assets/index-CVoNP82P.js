@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-DVNnQFOL.js","assets/HamburgerMenu-unxol4bR.js","assets/App-BmmWr2LQ.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-WUd2NgVZ.js","assets/HamburgerMenu-C3SkAHyF.js","assets/App-sCsgdFoX.js"])))=>i.map(i=>d[i]);
 function _mergeNamespaces(n, m) {
   for (var i = 0; i < m.length; i++) {
     const e = m[i];
@@ -9248,37 +9248,23 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
     return baseModule().catch(handlePreloadError);
   });
 };
-const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
-  const v = glob[path];
-  if (v) {
-    return typeof v === "function" ? v() : Promise.resolve(v);
-  }
-  return new Promise((_, reject) => {
-    (typeof queueMicrotask === "function" ? queueMicrotask : setTimeout)(
-      reject.bind(
-        null,
-        new Error(
-          "Unknown variable dynamic import: " + path + (path.split("/").length !== segs ? ". Note that variables only represent file names one level deep." : "")
-        )
-      )
-    );
-  });
+const pageRoutes = {
+  npgDemo: () => __vitePreload(() => import("./App-WUd2NgVZ.js"), true ? __vite__mapDeps([0,1]) : void 0),
+  testProject: () => __vitePreload(() => import("./App-sCsgdFoX.js"), true ? __vite__mapDeps([2,1]) : void 0)
+  // Add more routes here
 };
 let scenePath = null;
-const DefaultPage = reactExports.lazy(() => __vitePreload(() => import("./App-DVNnQFOL.js"), true ? __vite__mapDeps([0,1]) : void 0));
+reactExports.lazy(() => __vitePreload(() => import("./App-WUd2NgVZ.js"), true ? __vite__mapDeps([0,1]) : void 0));
 const Routing = () => {
   const location = useLocation();
-  const path = location.pathname.substring(1);
+  let path = location.pathname.replace(/^\/+/, "");
   reactExports.useEffect(() => {
-    if (path === "") scenePath = "/cube-test/projects/npgDemo";
-    else {
-      scenePath = `/cube-test/projects/${path}`;
-    }
+    scenePath = `/cube-test/projects/${path || "npgDemo"}`;
   }, [path]);
-  const PageComponent = reactExports.lazy(
-    () => __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./pages/npgDemo/App.tsx": () => __vitePreload(() => import("./App-DVNnQFOL.js"), true ? __vite__mapDeps([0,1]) : void 0), "./pages/testProject/App.tsx": () => __vitePreload(() => import("./App-BmmWr2LQ.js"), true ? __vite__mapDeps([2,1]) : void 0) }), `./pages/${path || "npgDemo"}/App.tsx`, 4).catch(() => DefaultPage)
-    // Fallback to DefaultPage if page doesn't exist
-  );
+  const PageComponent = reactExports.lazy(pageRoutes[path] || pageRoutes["npgDemo"]);
+  if (!path) {
+    window.history.replaceState(null, "", "/cube-test/npgDemo");
+  }
   return /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Loading..." }), children: /* @__PURE__ */ jsxRuntimeExports.jsx(PageComponent, {}) });
 };
 function formatMuiErrorMessage(code, ...args) {
@@ -14739,4 +14725,4 @@ export {
   isPlainObject as y,
   defaultTheme as z
 };
-//# sourceMappingURL=index-B0-ENjRz.js.map
+//# sourceMappingURL=index-CVoNP82P.js.map
