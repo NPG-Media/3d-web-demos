@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-WUd2NgVZ.js","assets/HamburgerMenu-C3SkAHyF.js","assets/App-sCsgdFoX.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-D_PPwcl5.js","assets/HamburgerMenu-hNWfbF5H.js","assets/App-BiBqgg88.js"])))=>i.map(i=>d[i]);
 function _mergeNamespaces(n, m) {
   for (var i = 0; i < m.length; i++) {
     const e = m[i];
@@ -9248,20 +9248,19 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
     return baseModule().catch(handlePreloadError);
   });
 };
-const pageRoutes = {
-  npgDemo: () => __vitePreload(() => import("./App-WUd2NgVZ.js"), true ? __vite__mapDeps([0,1]) : void 0),
-  testProject: () => __vitePreload(() => import("./App-sCsgdFoX.js"), true ? __vite__mapDeps([2,1]) : void 0)
-  // Add more routes here
+const pages = {
+  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-D_PPwcl5.js"), true ? __vite__mapDeps([0,1]) : void 0)),
+  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-BiBqgg88.js"), true ? __vite__mapDeps([2,1]) : void 0))
 };
 let scenePath = null;
-reactExports.lazy(() => __vitePreload(() => import("./App-WUd2NgVZ.js"), true ? __vite__mapDeps([0,1]) : void 0));
 const Routing = () => {
   const location = useLocation();
-  let path = location.pathname.replace(/^\/+/, "");
+  const base = "/cube-test";
+  const path = location.pathname.replace(`${base}/`, "").replace(/^\/+/, "");
   reactExports.useEffect(() => {
-    scenePath = `/cube-test/projects/${path || "npgDemo"}`;
+    scenePath = `${base}/projects/${path || "npgDemo"}`;
   }, [path]);
-  const PageComponent = reactExports.lazy(pageRoutes[path] || pageRoutes["npgDemo"]);
+  const PageComponent = pages[path] || pages["npgDemo"];
   if (!path) {
     window.history.replaceState(null, "", "/cube-test/npgDemo");
   }
@@ -14725,4 +14724,4 @@ export {
   isPlainObject as y,
   defaultTheme as z
 };
-//# sourceMappingURL=index-CVoNP82P.js.map
+//# sourceMappingURL=index-Ba0oVxyl.js.map
