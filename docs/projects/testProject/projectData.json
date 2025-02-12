@@ -1,0 +1,440 @@
+{
+  "sceneTitle": "Test scene",
+  "description": "This is a test scene to demonstrate the capabilities of the NPG 3JS platform.",
+  "sceneModels": [
+    {
+      "path": "/models/testScene.glb"
+    },
+    {
+      "path": "/models/airplane.glb",
+      "loopAnimation": "fly_loop"
+    },
+    {
+      "path": "/models/quest3.glb"
+    },
+    {
+      "path": "/models/scrollTest.glb"
+    }
+  ],
+  "canvasSettings": {
+    "backgroundColor": "#666666",
+    "antialias": true,
+    "environmentProps": {
+      "preset": "studio",
+      "background": false,
+      "environmentIntensity": 0.1,
+      "backgroundBlurriness": 0.1
+    },
+    "lights": [
+      {
+        "isLightArray": true,
+        "type": "PointLight",
+        "color": "#ffeecc",
+        "intensity": 10,
+        "distance": 10,
+        "xPositions": [2.5, 0, -2.5],
+        "zPositions": [2.5, 0, -2.5],
+        "yPosition": 3
+      },
+      {
+        "isShowcaseLighting": true,
+        "lights": [
+          {
+            "type": "ambient",
+            "color": "#ffffff",
+            "intensity": 0.5,
+            "on": true
+          }
+        ]
+      }
+    ],
+    "postEffects": {
+      "usePostEffects": true
+    }
+  },
+  "parentPoi": {
+    "name": "Test scene parent POI",
+    "description": "The parent POI for the test scene, encompassing all child POIs.",
+    "type": "staticObject",
+    "isMaster": true,
+    "cameraControls": {
+      "type": "orbit",
+      "enablePan": false,
+      "startPosition": {
+        "x": 0,
+        "y": 2,
+        "z": 10
+      },
+      "targetOffset": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "constraints": {
+        "up": 50,
+        "down": -1,
+        "minZoom": 1,
+        "maxZoom": 12
+      }
+    },
+    "childPois": [
+      {
+        "name": "Compressor",
+        "meshId": "Compressor",
+        "type": "productViewer",
+        "useOverlay": true,
+        "poiInfo": {
+          "title": "Compressor",
+          "description": [
+            "The TMC compressor is engineered to deliver superior performance and reliability in various industrial applications.",
+            "Equipped with advanced technology, the TMC compressor offers precise control and optimal energy consumption."
+          ],
+          "image": "compressor.jpg"
+        },
+        "cameraControls": {
+          "startPosition": {
+            "x": 0,
+            "y": 1,
+            "z": 8
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable"
+        },
+        "childPois": [
+          {
+            "name": "Compressor 1",
+            "type": "product",
+            "modelData": {
+              "path": "/models/compressor.glb"
+            }
+          },
+          {
+            "name": "Compressor 2",
+            "type": "product",
+            "modelData": {
+              "path": "/models/compressor.glb"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Screen",
+        "meshId": "Screen",
+        "type": "videoFrame",
+        "cameraControls": {
+          "startPosition": {
+            "x": 0,
+            "y": 1.8,
+            "z": 1
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "animationDuration": 1
+        },
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable",
+          "positionOffset": {
+            "x": 0,
+            "y": 1.3,
+            "z": 0
+          }
+        },
+        "videoData": {
+          "videoUrl": "npg_jul.mp4",
+          "fadeDuration": 500
+        }
+      },
+      {
+        "name": "Quest3",
+        "meshId": "Quest3",
+        "type": "staticObject",
+        "poiInfo": {
+          "title": "Interactive Solutions",
+          "description": [
+            "At NPG, we excel in crafting innovative and interactive solutions designed to captivate audiences.",
+            "Our cutting-edge products are thoughtfully designed to boost user engagement while maintaining seamless interfaces."
+          ],
+          "image": "npgVr.jpg"
+        },
+        "cameraControls": {
+          "constraints": {
+            "minZoom": 0.6,
+            "maxZoom": 0.6
+          },
+          "type": "static",
+          "startPosition": {
+            "x": 0,
+            "y": 0.3,
+            "z": 0.6
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable"
+        },
+        "childPois": [
+          {
+            "name": "Quest3",
+            "meshId": "Quest3",
+            "type": "inspectObject",
+            "inspectObjectData": {
+              "elevation": 0.3,
+              "rotationSpeed": 1
+            },
+            "cameraControls": {
+              "animate": false,
+              "type": "static",
+              "startPosition": {
+                "x": 0,
+                "y": 0.3,
+                "z": 0.6
+              },
+              "targetOffset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "uiElement": {
+              "useIcon": true,
+              "type": "clickable"
+            },
+            "poiFeatures": [
+              {
+                "name": "VR video",
+                "type": "videoFrame",
+                "activationType": "ui",
+                "data": {
+                  "videoUrl": "npg_jul.mp4",
+                  "fadeDuration": 1000,
+                  "fadeIn": true,
+                  "fadeOut": true
+                },
+                "uiElement": {
+                  "name": "Play Video",
+                  "type": "icon",
+                  "positionOffset": {
+                    "x": 0,
+                    "y": 0.3,
+                    "z": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TMC Mafyar",
+        "meshId": "TMC_Mafyar",
+        "type": "staticObject",
+        "poiInfo": {
+          "title": "TMC Maritime technology",
+          "description": [
+            "TMC delivers high-performance equipment that ensures optimal performance and reliability.",
+            "Equipped with advanced TMC technology, the ship can withstand harsh marine conditions and deliver superior performance.",
+            "Engineered to deliver exceptional performance and reliability in various marine applications."
+          ],
+          "image": "ship.jpg"
+        },
+        "cameraControls": {
+          "type": "orbit",
+          "constraints": {
+            "up": 50,
+            "down": 0,
+            "minZoom": 1,
+            "maxZoom": 12
+          },
+          "startPosition": {
+            "x": 0,
+            "y": 1,
+            "z": -2
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "animationDuration": 0.6
+        },
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable"
+        }
+      },
+      {
+        "name": "Airplane",
+        "meshId": "airplane",
+        "type": "staticObject",
+        "cameraControls": {
+          "type": "orbit",
+          "constraints": {
+            "up": 90,
+            "down": 90,
+            "minZoom": 0.6,
+            "maxZoom": 12
+          },
+          "startPosition": {
+            "x": 0,
+            "y": 1,
+            "z": 2
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "follow": true
+        },
+        "poiFeatures": [
+          {
+            "name": "Gear animation",
+            "type": "animation",
+            "activationType": "ui",
+            "data": {
+              "isAnimated": true,
+              "name": "LandingGear",
+              "loop": false,
+              "reverseOnFalse": true,
+              "speed": 1
+            },
+            "uiElement": {
+              "name": "Retract Gear",
+              "offName": "Extend Gear",
+              "type": "toggle"
+            }
+          }
+        ],
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable"
+        }
+      },
+      {
+        "name": "ScrollViewTest",
+        "meshId": "ScrollTester",
+        "type": "scrollView",
+        "cameraControls": {
+          "type": "fixed",
+          "constraints": {
+            "up": 90,
+            "down": 90,
+            "minZoom": 0.6,
+            "maxZoom": 12
+          },
+          "startPosition": {
+            "x": 0,
+            "y": 1,
+            "z": 2
+          },
+          "targetOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "uiElement": {
+          "useIcon": true,
+          "type": "clickable"
+        },
+        "scrollData": {
+          "steps": [
+            {
+              "stepName": "ScrollCube_1",
+              "cameraTransform": {
+                "position": {
+                  "x": 0,
+                  "y": 0.2,
+                  "z": 0.4
+                },
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "stepName": "ScrollCube_2",
+              "editMaterial": true,
+              "poiInfo": {
+                "title": "Scroll Cube 3",
+                "description": ["This is the third cube."]
+              },
+              "cameraTransform": {
+                "position": {
+                  "x": 0,
+                  "y": 0.2,
+                  "z": 0.4
+                },
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "stepName": "ScrollCube_3",
+              "poiInfo": {
+                "title": "Scroll Cube 3",
+                "description": ["This is the third cube."]
+              },
+              "cameraTransform": {
+                "position": {
+                  "x": 0,
+                  "y": 0.2,
+                  "z": 0.4
+                },
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "stepName": "ScrollCube_4",
+              "editMaterial": true,
+              "cameraTransform": {
+                "position": {
+                  "x": 0,
+                  "y": 0.2,
+                  "z": 0.4
+                },
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "debugSettings": {
+    "allTrue": false,
+    "gridHelper": false,
+    "axesHelper": false,
+    "stats": false,
+    "lightHelpers": false
+  }
+}
