@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-Dy91X-9J.js","assets/HamburgerMenu-CNwHeIuP.js","assets/App-DkzibSwp.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-DgfXiZBd.js","assets/HamburgerMenu-Blh-yTWG.js","assets/App-DQHLsrL1.js"])))=>i.map(i=>d[i]);
 function _mergeNamespaces(n, m) {
   for (var i = 0; i < m.length; i++) {
     const e = m[i];
@@ -9249,14 +9249,17 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   });
 };
 const pages = {
-  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-Dy91X-9J.js"), true ? __vite__mapDeps([0,1]) : void 0)),
-  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-DkzibSwp.js"), true ? __vite__mapDeps([2,1]) : void 0))
+  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-DgfXiZBd.js"), true ? __vite__mapDeps([0,1]) : void 0)),
+  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-DQHLsrL1.js"), true ? __vite__mapDeps([2,1]) : void 0))
 };
 let scenePath = null;
 const Routing = () => {
   const location = useLocation();
   const base = "/cube-test";
   const path = location.pathname.replace(`${base}/`, "").replace(/^\/+/, "");
+  console.log("Full URL Path:", location.pathname);
+  console.log("Extracted Path:", path);
+  console.log("Page Found:", pages[path] ? path : "Default (npgDemo)");
   reactExports.useEffect(() => {
     scenePath = `${base}/projects/${path || "npgDemo"}`;
   }, [path]);
@@ -14721,4 +14724,4 @@ export {
   isPlainObject as y,
   defaultTheme as z
 };
-//# sourceMappingURL=index-ioT4_hi-.js.map
+//# sourceMappingURL=index-wLqx40Od.js.map
