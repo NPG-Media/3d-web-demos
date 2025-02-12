@@ -1,9 +1,9 @@
-import { r as reactExports, j as jsxRuntimeExports } from "./index-DYVXPcKz.js";
-import { n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu, q as CameraHelper } from "./HamburgerMenu-B5YvAaBa.js";
-import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-TmSBFjaC.js";
-import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-Dl01ZsBe.js";
-import { u as useHelper } from "./Helper-D9A3advs.js";
-import "./BackButton-CQAO1D7p.js";
+import { r as reactExports, j as jsxRuntimeExports } from "./index-CqQfns4w.js";
+import { n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu, q as CameraHelper } from "./HamburgerMenu-DYNrQx9u.js";
+import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-C0qLm03P.js";
+import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-zaCuhEr5.js";
+import { u as useHelper } from "./Helper-JBjg3JCA.js";
+import "./BackButton-Dm2sR9G8.js";
 const projectData = {
   sceneTitle: "Test scene",
   description: "This is a test scene to demonstrate the capabilities of the NPG 3JS platform.",
@@ -522,4 +522,4 @@ const Effects = () => {
 export {
   App as default
 };
-//# sourceMappingURL=App-bUH6n5KO.js.map
+//# sourceMappingURL=App-CLlKiLkU.js.map

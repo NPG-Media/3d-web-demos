@@ -1,8 +1,8 @@
-import { j as jsxRuntimeExports, T as Typography, s as scenePath, r as reactExports } from "./index-DYVXPcKz.js";
-import { r as Button, n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-B5YvAaBa.js";
-import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-TmSBFjaC.js";
-import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-Dl01ZsBe.js";
-import "./BackButton-CQAO1D7p.js";
+import { j as jsxRuntimeExports, T as Typography, s as scenePath, r as reactExports } from "./index-CqQfns4w.js";
+import { r as Button, n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-DYNrQx9u.js";
+import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-C0qLm03P.js";
+import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-zaCuhEr5.js";
+import "./BackButton-Dm2sR9G8.js";
 const FullscreenButton = ({ fullScreen, setFullScreen }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     Button,
@@ -324,4 +324,4 @@ const Effects = () => {
 export {
   App as default
 };
-//# sourceMappingURL=App-CxT6rz_4.js.map
+//# sourceMappingURL=App-Bd16A0Ps.js.map

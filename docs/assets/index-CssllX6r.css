@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Red Hat Display";
-  src: url("/cube-test/fonts/RedHatDisplay-Regular.ttf") format("truetype");
+  src: url("/3d-web-demos/fonts/RedHatDisplay-Regular.ttf") format("truetype");
 }
 
 #root {

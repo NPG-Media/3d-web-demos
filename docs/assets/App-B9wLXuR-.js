@@ -1,7 +1,7 @@
-import { r as reactExports, _ as _extends, j as jsxRuntimeExports, s as scenePath } from "./index-DYVXPcKz.js";
-import { O as OrthographicCamera, P as PlaneGeometry, M as Mesh, a as MathUtils, S as ShaderMaterial, U as UniformsUtils, R as REVISION, u as useThree, W as WebGLRenderTarget, L as LinearFilter, H as HalfFloatType, D as DepthTexture, F as FloatType, b as addEffect, c as addAfterEffect, d as Scene, e as Object3D, f as createPortal, g as useFrame, h as extend, i as MeshBasicMaterial, B as Box3, j as LinearMipmapLinearFilter, k as RedFormat, N as NearestFilter, V as Vector2, l as useGLTF, Q as Quaternion, m as Vector3, T as TextureLoader, E as Euler, C as Color, G as Group, n as Canvas, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-B5YvAaBa.js";
-import { u as useSpring, a as animated, B as BackButton } from "./BackButton-CQAO1D7p.js";
-import { T as Text, D as DynamicCameraFov } from "./DynamicCameraFov-LMJI67wn.js";
+import { r as reactExports, _ as _extends, j as jsxRuntimeExports, b as basePath, s as scenePath } from "./index-CqQfns4w.js";
+import { O as OrthographicCamera, P as PlaneGeometry, M as Mesh, a as MathUtils, S as ShaderMaterial, U as UniformsUtils, R as REVISION, u as useThree, W as WebGLRenderTarget, L as LinearFilter, H as HalfFloatType, D as DepthTexture, F as FloatType, b as addEffect, c as addAfterEffect, d as Scene, e as Object3D, f as createPortal, g as useFrame, h as extend, i as MeshBasicMaterial, B as Box3, j as LinearMipmapLinearFilter, k as RedFormat, N as NearestFilter, V as Vector2, l as useGLTF, Q as Quaternion, m as Vector3, T as TextureLoader, E as Euler, C as Color, G as Group, n as Canvas, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-DYNrQx9u.js";
+import { u as useSpring, a as animated, B as BackButton } from "./BackButton-Dm2sR9G8.js";
+import { T as Text, D as DynamicCameraFov } from "./DynamicCameraFov-BWQ23ehV.js";
 function useCursor(hovered, onPointerOver = "pointer", onPointerOut = "auto", container = document.body) {
   reactExports.useEffect(() => {
     if (hovered) {
@@ -1030,7 +1030,7 @@ function PortalObject({
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           Text,
           {
-            font: "/cube-test/fonts/RedHatDisplay-SemiBold.ttf",
+            font: `${basePath || ""}/fonts/RedHatDisplay-SemiBold.ttf`,
             color: "#ffffff",
             anchorY: "top",
             anchorX: "left",
@@ -1042,7 +1042,7 @@ function PortalObject({
         tagline && /* @__PURE__ */ jsxRuntimeExports.jsx(
           Text,
           {
-            font: "/cube-test/fonts/RedHatDisplay-Regular.ttf",
+            font: `${basePath || ""}/fonts/RedHatDisplay-Regular.ttf`,
             color: "#ffffff",
             fillOpacity: Opacity,
             anchorY: "top",
@@ -1064,11 +1064,22 @@ const PortalText = ({ header, tagline }) => {
   const fontSize = header === "Sport &\nCommunication" ? 0.3 : 0.4;
   const textHeight = header === "Sport &\nCommunication" ? 1.2 : 1.4;
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Text, { font: "/cube-test/fonts/RedHatDisplay-SemiBold.ttf", color: "#ffffff", anchorY: "top", anchorX: "left", position: [-1.1, 2, 1], fontSize, children: header }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       Text,
       {
-        font: "/cube-test/fonts/RedHatDisplay-Regular.ttf",
+        font: `${basePath || ""}/fonts/RedHatDisplay-SemiBold.ttf`,
+        color: "#ffffff",
+        anchorY: "top",
+        anchorX: "left",
+        position: [-1.1, 2, 1],
+        fontSize,
+        children: header
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Text,
+      {
+        font: `${basePath || ""}/fonts/RedHatDisplay-Regular.ttf`,
         color: "#ffffff",
         anchorY: "top",
         anchorX: "left",
@@ -1221,4 +1232,4 @@ const App = () => {
 export {
   App as default
 };
-//# sourceMappingURL=App-C0ODz_44.js.map
+//# sourceMappingURL=App-B9wLXuR-.js.map

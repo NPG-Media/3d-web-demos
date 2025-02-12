@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-C0ODz_44.js","assets/HamburgerMenu-B5YvAaBa.js","assets/BackButton-CQAO1D7p.js","assets/DynamicCameraFov-LMJI67wn.js","assets/App-bUH6n5KO.js","assets/AddCameraTarget-TmSBFjaC.js","assets/PoiHandler-Dl01ZsBe.js","assets/Helper-D9A3advs.js","assets/App-CxT6rz_4.js","assets/App-BBAbQNwj.js","assets/App-BP-Kjjj2.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/App-B9wLXuR-.js","assets/HamburgerMenu-DYNrQx9u.js","assets/BackButton-Dm2sR9G8.js","assets/DynamicCameraFov-BWQ23ehV.js","assets/App-CLlKiLkU.js","assets/AddCameraTarget-C0qLm03P.js","assets/PoiHandler-zaCuhEr5.js","assets/Helper-JBjg3JCA.js","assets/App-Bd16A0Ps.js","assets/App-CKHSK05f.js","assets/App-D-tiTfAj.js"])))=>i.map(i=>d[i]);
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
@@ -9189,7 +9189,7 @@ function useViewTransitionState(to, opts = {}) {
 new TextEncoder();
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
-  return "/cube-test/" + dep;
+  return "/3d-web-demos/" + dep;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -16903,11 +16903,11 @@ const ListItemText = /* @__PURE__ */ reactExports.forwardRef(function ListItemTe
 });
 const ProjectSelector = ({ setSelectedPage }) => {
   const projects = [
+    { name: "Nammo", id: "nammo" },
     { name: "NPG Cube", id: "npgDemo" },
+    { name: "Scroll Demo", id: "scrollDemo" },
     { name: "Test Project", id: "testProject" },
-    { name: "nammo", id: "nammo" },
-    { name: "scrollDemo", id: "scrollDemo" },
-    { name: "trox", id: "trox" }
+    { name: "Trox", id: "trox" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(Box, { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Typography, { variant: "h4", gutterBottom: true, color: "white", children: "Select a Project" }),
@@ -16915,21 +16915,25 @@ const ProjectSelector = ({ setSelectedPage }) => {
   ] });
 };
 const pages = {
-  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-C0ODz_44.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0)),
-  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-bUH6n5KO.js"), true ? __vite__mapDeps([4,1,5,6,2,7]) : void 0)),
-  nammo: reactExports.lazy(() => __vitePreload(() => import("./App-CxT6rz_4.js"), true ? __vite__mapDeps([8,1,5,6,2]) : void 0)),
-  scrollDemo: reactExports.lazy(() => __vitePreload(() => import("./App-BBAbQNwj.js"), true ? __vite__mapDeps([9,1,5,3,7]) : void 0)),
-  trox: reactExports.lazy(() => __vitePreload(() => import("./App-BP-Kjjj2.js"), true ? __vite__mapDeps([10,1,5,6,2]) : void 0))
+  npgDemo: reactExports.lazy(() => __vitePreload(() => import("./App-B9wLXuR-.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0)),
+  testProject: reactExports.lazy(() => __vitePreload(() => import("./App-CLlKiLkU.js"), true ? __vite__mapDeps([4,1,5,6,2,7]) : void 0)),
+  nammo: reactExports.lazy(() => __vitePreload(() => import("./App-Bd16A0Ps.js"), true ? __vite__mapDeps([8,1,5,6,2]) : void 0)),
+  scrollDemo: reactExports.lazy(() => __vitePreload(() => import("./App-CKHSK05f.js"), true ? __vite__mapDeps([9,1,5,3,7]) : void 0)),
+  trox: reactExports.lazy(() => __vitePreload(() => import("./App-D-tiTfAj.js"), true ? __vite__mapDeps([10,1,5,6,2]) : void 0))
 };
 let scenePath = null;
+let basePath = null;
 const Routing = () => {
   const location = useLocation();
-  const base = "/cube-test";
-  location.pathname.replace(`${base}/`, "").replace(/^\/+/, "");
+  const base = "/3d-web-demos";
+  const path = location.pathname.replace(`${base}/`, "").replace(/^\/+/, "");
   const [selectedPage, setSelectedPage] = reactExports.useState(null);
   reactExports.useEffect(() => {
-    scenePath = `${base}/projects/${selectedPage || "npgDemo"}`;
+    scenePath = `${base}/projects/${selectedPage}`;
   }, [selectedPage]);
+  reactExports.useEffect(() => {
+    basePath = base;
+  }, [path]);
   const PageComponent = selectedPage ? pages[selectedPage] || pages["npgDemo"] : ProjectSelector;
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     reactExports.Suspense,
@@ -16939,8 +16943,8 @@ const Routing = () => {
     }
   );
 };
-const RedHatDisplay = "/cube-test/fonts/RedHatDisplay-Regular.ttf";
-const RedHatDisplaySemibold = "/cube-test/fonts/RedHatDisplay-SemiBold.ttf";
+const RedHatDisplay = "/3d-web-demos/fonts/RedHatDisplay-Regular.ttf";
+const RedHatDisplaySemibold = "/3d-web-demos/fonts/RedHatDisplay-SemiBold.ttf";
 const theme = createTheme({
   typography: {
     fontFamily: "Red Hat Display, Arial, sans-serif",
@@ -17023,61 +17027,62 @@ const theme = createTheme({
   }
 });
 ReactDOM.createRoot(document.getElementById("root")).render(
-  /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/cube-test", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(ThemeProvider, { theme, children: [
+  /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/3d-web-demos", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(ThemeProvider, { theme, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(CssBaseline, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Routing, {})
   ] }) }) })
 );
 export {
-  _inheritsLoose as A,
+  memoTheme as A,
   Box as B,
-  _objectWithoutPropertiesLoose as C,
-  TransitionGroupContext as D,
-  alpha as E,
-  getOverlayAlpha as F,
-  keyframes as G,
-  css as H,
-  createSimplePaletteValueFilter as I,
-  ButtonBase as J,
-  setRef as K,
-  useSlot as L,
-  rootShouldForwardProp as M,
-  useEventCallback as N,
-  extractEventHandlers as O,
-  useTimeout as P,
-  List as Q,
+  _inheritsLoose as C,
+  _objectWithoutPropertiesLoose as D,
+  TransitionGroupContext as E,
+  alpha as F,
+  getOverlayAlpha as G,
+  keyframes as H,
+  css as I,
+  createSimplePaletteValueFilter as J,
+  ButtonBase as K,
+  setRef as L,
+  useSlot as M,
+  rootShouldForwardProp as N,
+  useEventCallback as O,
+  extractEventHandlers as P,
+  useTimeout as Q,
   React as R,
-  useRtl as S,
+  List as S,
   Typography as T,
-  ListContext as U,
-  listItemTextClasses as V,
-  requireReact as W,
+  useRtl as U,
+  ListContext as V,
+  listItemTextClasses as W,
+  requireReact as X,
   _extends as _,
   ReactDOM as a,
-  resolveProps as b,
+  basePath as b,
   clientExports as c,
-  useEnhancedEffect as d,
-  React$1 as e,
-  generateUtilityClass as f,
+  resolveProps as d,
+  useEnhancedEffect as e,
+  React$1 as f,
   generateUtilityClasses as g,
-  styled as h,
-  useDefaultProps as i,
+  generateUtilityClass as h,
+  styled as i,
   jsxRuntimeExports as j,
-  clsx as k,
-  composeClasses as l,
-  THEME_ID as m,
-  requireReactDom as n,
-  getDefaultExportFromCjs as o,
-  resolveComponentProps as p,
-  mergeSlotProps as q,
+  useDefaultProps as k,
+  clsx as l,
+  composeClasses as m,
+  THEME_ID as n,
+  requireReactDom as o,
+  getDefaultExportFromCjs as p,
+  resolveComponentProps as q,
   reactExports as r,
   scenePath as s,
-  useForkRef as t,
+  mergeSlotProps as t,
   useTheme$2 as u,
-  appendOwnerState as v,
-  useTheme$1 as w,
-  defaultTheme$1 as x,
-  capitalize as y,
-  memoTheme as z
+  useForkRef as v,
+  appendOwnerState as w,
+  useTheme$1 as x,
+  defaultTheme$1 as y,
+  capitalize as z
 };
-//# sourceMappingURL=index-DYVXPcKz.js.map
+//# sourceMappingURL=index-CqQfns4w.js.map

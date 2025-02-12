@@ -1,8 +1,8 @@
-import { r as reactExports, j as jsxRuntimeExports, s as scenePath, c as clientExports, R as React, B as Box } from "./index-DYVXPcKz.js";
-import { V as Vector2, C as Color, m as Vector3, Q as Quaternion, s as Matrix4, t as Vector4, E as Euler, v as Spherical, u as useThree, g as useFrame, e as Object3D, A as AnimationMixer, l as useGLTF, M as Mesh, w as MeshStandardMaterial, T as TextureLoader, a as MathUtils, x as RepeatWrapping, n as Canvas, o as Stats, p as HamburgerMenu, q as CameraHelper } from "./HamburgerMenu-B5YvAaBa.js";
-import { I as InfoWindow, P as PoiProvider, L as LoadingSpinner, b as LoadModels, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-TmSBFjaC.js";
-import { T as Text, D as DynamicCameraFov } from "./DynamicCameraFov-LMJI67wn.js";
-import { u as useHelper } from "./Helper-D9A3advs.js";
+import { r as reactExports, s as scenePath, j as jsxRuntimeExports, c as clientExports, R as React, B as Box } from "./index-CqQfns4w.js";
+import { V as Vector2, C as Color, m as Vector3, Q as Quaternion, s as Matrix4, t as Vector4, E as Euler, v as Spherical, u as useThree, g as useFrame, e as Object3D, A as AnimationMixer, l as useGLTF, M as Mesh, w as MeshStandardMaterial, T as TextureLoader, a as MathUtils, x as RepeatWrapping, n as Canvas, o as Stats, p as HamburgerMenu, q as CameraHelper } from "./HamburgerMenu-DYNrQx9u.js";
+import { I as InfoWindow, P as PoiProvider, L as LoadingSpinner, b as LoadModels, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-C0qLm03P.js";
+import { T as Text, D as DynamicCameraFov } from "./DynamicCameraFov-BWQ23ehV.js";
+import { u as useHelper } from "./Helper-JBjg3JCA.js";
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -626,7 +626,7 @@ const scrollStops = [
     poiInfo: {
       title: "3D Web Experiences are Here!",
       description: ["Start scrolling to get a taste of what 3D web experiences can offer."],
-      image: "/projects/npgDemo/images/interactive.jpg",
+      image: scenePath + "/images/interactive.jpg",
       parentStyling: { fontFamily: "Red Hat Display" },
       globalPath: true,
       imageStyling: { objectFit: "cover", height: "auto" },
@@ -646,7 +646,7 @@ const scrollStops = [
       description: [
         "Wether it's for showcasing products, visualizing data, staff training, or just for fun, 3D web experiences are an exciting new way to engage with web content."
       ],
-      image: "public/projects/testProject/images/ship.jpg"
+      image: scenePath + "/images/ship.jpg"
     }
   },
   {
@@ -665,7 +665,7 @@ const scrollStops = [
         "The camera will lock to each stop for a short delay.",
         "The camera will unlock after the delay and allow scrolling to the next stop."
       ],
-      image: "public/projects/testProject/images/ship.jpg"
+      image: scenePath + "/images/ship.jpg"
     }
   },
   {
@@ -679,7 +679,7 @@ const scrollStops = [
         "The camera will lock to each stop for a short delay.",
         "The camera will unlock after the delay and allow scrolling to the next stop."
       ],
-      image: "public/projects/testProject/images/ship.jpg"
+      image: scenePath + "/images/ship.jpg"
     }
   }
 ];
@@ -715,10 +715,10 @@ function ScrollModel({ modelData, stopDelay = 1e3 }) {
     }
   }, [scroll]);
   const texturePaths = {
-    RobotArm: "\\projects\\scrollDemo\\textures\\M_RobotArm_occlusionRoughnessMetallic.png",
-    WindTurbine_Base: "\\projects\\scrollDemo\\textures\\M_Windmill_occlusionRoughnessMetallic.png",
-    WindTurbine_Base2: "\\projects\\scrollDemo\\textures\\M_WindmillBase_occlusionRoughnessMetallic.png",
-    Tanker: "\\projects\\scrollDemo\\textures\\M_Tanker_occlusionRoughnessMetallic.png"
+    RobotArm: `${scenePath}/textures/M_RobotArm_occlusionRoughnessMetallic.png`,
+    WindTurbine_Base: `${scenePath}/textures/M_Windmill_occlusionRoughnessMetallic.png`,
+    WindTurbine_Base2: `${scenePath}/textures/M_WindmillBase_occlusionRoughnessMetallic.png`,
+    Tanker: `${scenePath}/textures/M_Tanker_occlusionRoughnessMetallic.png`
   };
   const usePreloadedTextures = () => {
     const [textures, setTextures] = reactExports.useState({});
@@ -877,7 +877,15 @@ function ScrollModel({ modelData, stopDelay = 1e3 }) {
             transform: "translateY(-50%)",
             pointerEvents: "auto"
           },
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(InfoWindow, { title: stop.poiInfo.title, description: stop.poiInfo.description, image: stop.poiInfo.image, globalPath: stop.poiInfo.globalPath })
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            InfoWindow,
+            {
+              title: stop.poiInfo.title,
+              description: stop.poiInfo.description,
+              image: stop.poiInfo.image,
+              globalPath: stop.poiInfo.globalPath
+            }
+          )
         }
       ) }, index)) })
     );
@@ -927,7 +935,7 @@ const ThreeDText = ({ text, position = [0, 0, 0], rotation = [0, 0, 0], scale = 
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     Text,
     {
-      font: "/fonts/RedHatDisplay-SemiBold.ttf",
+      font: "fonts/RedHatDisplay-SemiBold.ttf",
       color: "#ffffff",
       anchorY: "top",
       anchorX: "left",
@@ -1036,7 +1044,7 @@ const App = () => {
           /* @__PURE__ */ jsxRuntimeExports.jsx("color", { attach: "background", args: ["#333333"] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingSpinner, {}), children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(LoadModels, { modelData: projectData.sceneModels }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Environment, { files: "/images/hdri/blurred.hdr" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Environment, { files: "/3d-web-demos/images/hdri/blurred.hdr" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(Light, { debugMode }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(DynamicCameraFov, { frameSize: 6 }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(AddCameraTarget, {}),
@@ -1087,4 +1095,4 @@ export {
   App as default,
   useDebug
 };
-//# sourceMappingURL=App-BBAbQNwj.js.map
+//# sourceMappingURL=App-CKHSK05f.js.map

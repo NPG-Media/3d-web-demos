@@ -1,7 +1,7 @@
-import { r as reactExports, _ as _extends, j as jsxRuntimeExports, c as clientExports, s as scenePath, R as React, a as ReactDOM, B as Box } from "./index-DYVXPcKz.js";
-import { m as Vector3, a1 as MOUSE, a2 as TOUCH, Q as Quaternion, a3 as PerspectiveCamera, O as OrthographicCamera, v as Spherical, V as Vector2, a4 as Ray, a5 as Plane, u as useThree, g as useFrame, J as ShaderChunk, W as WebGLRenderTarget, R as REVISION, M as Mesh, a6 as BufferGeometry, Y as Sphere, a7 as BufferAttribute, s as Matrix4, C as Color, S as ShaderMaterial, L as LinearFilter, a8 as DataTexture, a9 as NoColorSpace, x as RepeatWrapping, N as NearestFilter, k as RedFormat, F as FloatType, aa as RGBAFormat, H as HalfFloatType, ab as applyProps, A as AnimationMixer, ac as LoopRepeat, ad as LoopOnce, ae as Clock, r as Button, E as Euler, e as Object3D, af as Raycaster, w as MeshStandardMaterial, a as MathUtils, ag as SphereGeometry, i as MeshBasicMaterial, l as useGLTF, n as Canvas, ah as useTheme } from "./HamburgerMenu-B5YvAaBa.js";
-import { c as Pass, u as usePoi, I as InfoWindow, E as Environment, d as useMediaQuery, b as LoadModels } from "./AddCameraTarget-TmSBFjaC.js";
-import { B as BackButton, u as useSpring, a as animated } from "./BackButton-CQAO1D7p.js";
+import { r as reactExports, _ as _extends, j as jsxRuntimeExports, c as clientExports, s as scenePath, R as React, a as ReactDOM, B as Box, b as basePath } from "./index-CqQfns4w.js";
+import { m as Vector3, a1 as MOUSE, a2 as TOUCH, Q as Quaternion, a3 as PerspectiveCamera, O as OrthographicCamera, v as Spherical, V as Vector2, a4 as Ray, a5 as Plane, u as useThree, g as useFrame, J as ShaderChunk, W as WebGLRenderTarget, R as REVISION, M as Mesh, a6 as BufferGeometry, Y as Sphere, a7 as BufferAttribute, s as Matrix4, C as Color, S as ShaderMaterial, L as LinearFilter, a8 as DataTexture, a9 as NoColorSpace, x as RepeatWrapping, N as NearestFilter, k as RedFormat, F as FloatType, aa as RGBAFormat, H as HalfFloatType, ab as applyProps, A as AnimationMixer, ac as LoopRepeat, ad as LoopOnce, ae as Clock, r as Button, E as Euler, e as Object3D, af as Raycaster, w as MeshStandardMaterial, a as MathUtils, ag as SphereGeometry, i as MeshBasicMaterial, l as useGLTF, n as Canvas, ah as useTheme } from "./HamburgerMenu-DYNrQx9u.js";
+import { c as Pass, u as usePoi, I as InfoWindow, E as Environment, d as useMediaQuery, b as LoadModels } from "./AddCameraTarget-C0qLm03P.js";
+import { B as BackButton, u as useSpring, a as animated } from "./BackButton-Dm2sR9G8.js";
 var __defProp$2 = Object.defineProperty;
 var __defNormalProp$2 = (obj, key, value) => key in obj ? __defProp$2(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField$2 = (obj, key, value) => {
@@ -6177,7 +6177,7 @@ const DisplayPoiUi = ({ uiRef }) => {
   return null;
 };
 const PoiHandler = ({ projectData, canvasRef, uiRef, overlayRef }) => {
-  const uiElement = { iconSize: 400, iconPath: "/projects/trox/images/TroxOx.png" };
+  const uiElement = { iconSize: 400, iconPath: `${basePath}/projects/trox/images/TroxOx.png` };
   const { camera, size } = useThree();
   if (projectData.sceneTitle === "Trox Demo") {
     createPoiIcon(uiElement, uiRef, camera, size, void 0, void 0, new Vector3(0, 14, 0));
@@ -6196,4 +6196,4 @@ export {
   PoiHandler as P,
   SoftShadows as S
 };
-//# sourceMappingURL=PoiHandler-Dl01ZsBe.js.map
+//# sourceMappingURL=PoiHandler-zaCuhEr5.js.map

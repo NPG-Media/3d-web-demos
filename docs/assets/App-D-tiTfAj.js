@@ -1,8 +1,8 @@
-import { j as jsxRuntimeExports, r as reactExports } from "./index-DYVXPcKz.js";
-import { l as useGLTF, n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-B5YvAaBa.js";
-import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-TmSBFjaC.js";
-import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-Dl01ZsBe.js";
-import "./BackButton-CQAO1D7p.js";
+import { j as jsxRuntimeExports, r as reactExports } from "./index-CqQfns4w.js";
+import { l as useGLTF, n as Canvas, m as Vector3, o as Stats, p as HamburgerMenu } from "./HamburgerMenu-DYNrQx9u.js";
+import { P as PoiProvider, L as LoadingSpinner, E as Environment, A as AddCameraTarget, a as EffectComposer, T as ToneMapping } from "./AddCameraTarget-C0qLm03P.js";
+import { P as PoiHandler, N as N8AO, S as SoftShadows } from "./PoiHandler-zaCuhEr5.js";
+import "./BackButton-Dm2sR9G8.js";
 const projectData = {
   sceneTitle: "Trox Demo",
   description: "Demo for Trox Ox products",
@@ -109,7 +109,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -149,7 +149,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -189,7 +189,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -229,7 +229,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -269,7 +269,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -309,7 +309,7 @@ const projectData = {
         uiElement: {
           useIcon: true,
           type: "icon",
-          iconPath: "/projects/trox/images/TroxBox.png",
+          iconPath: "projects/trox/images/TroxBox.png",
           iconSize: 60
         }
       },
@@ -1157,4 +1157,4 @@ const Effects = () => {
 export {
   App as default
 };
-//# sourceMappingURL=App-BP-Kjjj2.js.map
+//# sourceMappingURL=App-D-tiTfAj.js.map
